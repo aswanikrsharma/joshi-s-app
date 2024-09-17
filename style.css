@@ -1,0 +1,200 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+/* -----------------navigation bar---------------------  */
+nav{
+    width: 100%;
+    height: 60px;
+    border-bottom: 1px solid rgb(211, 211, 211);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    background-color: white;
+    position: fixed;
+    top: 0;
+}
+div.logo a{
+    font-size: 30px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+nav ul{
+    display: flex;
+}
+nav ul li{
+    list-style-type: none;
+}
+nav ul li a{
+    text-decoration: none;
+    color: black;
+    padding: 5px 20px;
+    font-size: 16px;
+    font-weight: 550;
+}
+nav ul li a:hover{
+    text-decoration: underline;
+}
+div.login{
+    font-size: 16px;
+    font-weight: 550;
+    color: white;
+    background-color: rgb(28,193,223);
+    padding: 5px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+div.login:hover{
+    background-color:  rgb(22, 155, 200);
+}
+#check{
+    display: none;
+}
+#checkbtn{
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+}
+#check:checked ~ ul{
+    left: 0;
+}
+
+@media screen and (max-width:768px){
+#checkbtn {
+    display: block;
+}
+label #menu-btn{
+    display: block;
+}
+label #close-btn{
+    display: none;
+}
+nav ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    position: fixed;
+    top: 60px;
+    left: -100%;
+    width: 100%;
+    height: 50vh;
+    background-color: rgb(28,193,223);
+    transition: 0.5s ease;
+}
+#check:checked ~ label #menu-btn{
+display: none;
+}
+#check:checked ~ label #close-btn{
+display: block;
+}
+}
+@media screen and (max-width:300px){
+    nav{
+        padding: 5px 10px;
+    }
+    div.logo a{
+        font-size: 20px;
+        padding-left: 15px;
+    }
+    div.login,#menu-btn,#close-btn, nav ul li a{
+        font-size: 15px;
+    }
+}
+
+
+/* -----------------------main body--------------------- */
+.main-content{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 60px;
+}
+.cards{
+    width: 240px;
+    height: fit-content;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 1px 1px 10px 1px rgb(175, 173, 173);
+}
+.card-inner-padding{
+    padding: 10px;
+}
+.card-logo{
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    width: 80px;
+}
+.number-of-user{
+    width: fit-content;
+    display: flex;
+    box-shadow:1px 1px 10px 1px rgb(175, 173, 173);
+    padding: 8px;
+    border-radius: 18px;
+}
+.number-of-user p{
+    font-size: 10px;
+}
+.lightning{
+    width: 10px;
+}
+.language{
+    border-top: 1px solid rgb(227, 222, 222);
+    border-bottom: 1px solid rgb(227, 222, 222);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+    
+}
+.language svg{
+    margin: 5px;
+}
+.additional-info{
+    padding-left: 15px;
+    margin-top: 20px;
+}
+ul li{
+    margin-bottom: 15px;
+    font-size: 12px;
+}
+.color-green{
+    color: rgb(46, 183, 30);
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+button{
+    margin-top: 30px;
+    padding: 10px 50px; 
+    background-color: rgb(28, 193, 223);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+}
+button:hover{
+    background-color:rgb(22, 155, 200) ;
+}
